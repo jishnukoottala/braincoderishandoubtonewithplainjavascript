@@ -44,97 +44,115 @@
 		</div>
 	  </nav>
 <div class="container-fluid d-flex flex-column flex-md-column flex-sm-column flex-lg-row p-4 justify-content-space-between">
-	<form class="shadow-sm rounded p-4">
-		<p class="h5 mb-4">Filters</p>
-		<div class="mb-3">
-		  <label for="email" class="form-label">Email address</label>
-		  <input type="email" class="form-control" id="email" aria-describedby="email">
-		  <div class="form-text">We'll never share your email with anyone else.</div>
-		</div>
-		<div class="mb-3">
-		
-			<select class="form-select" aria-label="Select RAM" id="ram">
-				<option selected>Select RAM</option>
-				<option value="2">2 GB</option>
-				<option value="4">4 GB</option>
-				<option value="6">6 GB</option>
-				<option value="8">8 GB</option>
-				<option value="12">12 GB</option>
-			  </select>
-		</div>
-		<div class="mb-3">
-			<label for="minimumrange" class="form-label">Minimum <span id="minimumrange"></span></label>
-			<input type="range" id="minrange" class="form-range" min="5000" max="10000" id="minimumrange" step="1000"  oninput="showMinimumPrice(this.value)" onchange="showMinimumPrice(this.value)">
-		</div>
-		<div class="mb-3">
-			<label for="maximumrange" class="form-label">Maximum <span id="maximumrange"></span> </label>
-			<input type="range" id="maxrange" class="form-range" min="10000" max="200000" id="maximumrange" oninput="showMaximumPrice(this.value)" onchange="showMaximumPrice(this.value)">
-		</div>
-		<div class="mb-4">
-			<div class="form-check">
-			<input class="form-check-input" name="phoneos" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="iOS">
-			<label class="form-check-label" for="flexRadioDefault1">
-			 iOS
-			</label>
-		  </div>
-		  <div class="form-check">
-			<input class="form-check-input"  name="phoneos" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="Android">
-			<label class="form-check-label" for="flexRadioDefault2">
-			Android
-			</label>
-		  </div>
-		  <div class="form-check">
-			<input class="form-check-input" name="phoneos" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  value="others">
-			<label class="form-check-label" for="flexRadioDefault2">
-			Others
-			</label>
-		  </div>
 
+	<div class="d-flex w-15 me-lg-2" >
+		<div class="accordion accordion-flush w-lg-80 w-100">
+			<div class="accordion-item shadow-sm rounded p-4">
+				<h5 class="accordion-header " id="flush-headingOne">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+					 Filters
+					</button>
+				  </h5>
+				<div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						<div class="mb-3">
+							<label for="email" class="form-label">Email address</label>
+							<input type="email" class="form-control" id="email" aria-describedby="email">
+							<div class="form-text">We'll never share your email with anyone else.</div>
+						  </div>
+						  <div class="mb-3">
+						  
+							  <select class="form-select" aria-label="Select RAM" id="ram">
+								  <option selected>Select RAM</option>
+								  <option value="2">2 GB</option>
+								  <option value="4">4 GB</option>
+								  <option value="6">6 GB</option>
+								  <option value="8">8 GB</option>
+								  <option value="12">12 GB</option>
+								</select>
+						  </div>
+						  <div class="mb-3">
+							  <label for="minimumrange" class="form-label">Minimum <span id="minimumrange"></span></label>
+							  <input type="range" id="minrange" class="form-range" min="5000" max="10000" id="minimumrange" step="1000"  oninput="showMinimumPrice(this.value)" onchange="showMinimumPrice(this.value)">
+						  </div>
+						  <div class="mb-3">
+							  <label for="maximumrange" class="form-label">Maximum <span id="maximumrange"></span> </label>
+							  <input type="range" id="maxrange" class="form-range" min="10000" max="200000" id="maximumrange" oninput="showMaximumPrice(this.value)" onchange="showMaximumPrice(this.value)">
+						  </div>
+						  <div class="mb-4">
+							  <div class="form-check">
+							  <input class="form-check-input" name="phoneos" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="iOS">
+							  <label class="form-check-label" for="flexRadioDefault1">
+							   iOS
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input"  name="phoneos" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="Android">
+							  <label class="form-check-label" for="flexRadioDefault2">
+							  Android
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" name="phoneos" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  value="others">
+							  <label class="form-check-label" for="flexRadioDefault2">
+							  Others
+							  </label>
+							</div>
+				  
+						  </div>
+						  <div class="mb-3">
+							  <p class="h6 mb-1">Other</p>
+							  <div class="form-check">
+								  <input class="form-check-input" name="othertype" type="checkbox" value="Perfomance Oriented" id="Perfomance Oriented">
+								  <label class="form-check-label" for="Perfomance Oriented">
+									Perfomance Oriented
+								  </label>
+								</div>
+								<div class="form-check">
+								  <input class="form-check-input" name="othertype" type="checkbox" value="Great Display" id="Great Display">
+								  <label class="form-check-label" for="Great Display">
+								  Great Display
+								  </label>
+								</div>
+								<div class="form-check">
+								  <input class="form-check-input"  name="othertype" type="checkbox" value="Want for Gaming" id="Want for Gaming">
+								  <label class="form-check-label" for="Want for Gaming">
+								   Want for Gaming
+								  </label>
+								</div>
+								<div class="form-check">
+								  <input class="form-check-input"  name="othertype" type="checkbox" value="Want for Gaming" id="Excellent Camera">
+								  <label class="form-check-label" for="Excellent Camera">
+									Excellent Camera
+								  </label>
+								</div>
+							  
+						  </div>
+						  
+							  <div class="mb-5 form-check form-switch">
+								  <input class="form-check-input" type="checkbox" id="showNoCostEmi">
+								  <label class="form-check-label" for="showNoCostEmi">Show only no cost EMI Options</label>
+								</div>
+						   
+					  
+						  <button type="button" class="btn btn-primary" onclick="getResults()">Submit</button>
+					</div>
+				  </div>
+				
+				</div>
 		</div>
-		<div class="mb-3">
-			<p class="h6 mb-1">Other</p>
-			<div class="form-check">
-				<input class="form-check-input" name="othertype" type="checkbox" value="Perfomance Oriented" id="Perfomance Oriented">
-				<label class="form-check-label" for="Perfomance Oriented">
-				  Perfomance Oriented
-				</label>
-			  </div>
-			  <div class="form-check">
-				<input class="form-check-input" name="othertype" type="checkbox" value="Great Display" id="Great Display">
-				<label class="form-check-label" for="Great Display">
-				Great Display
-				</label>
-			  </div>
-			  <div class="form-check">
-				<input class="form-check-input"  name="othertype" type="checkbox" value="Want for Gaming" id="Want for Gaming">
-				<label class="form-check-label" for="Want for Gaming">
-				 Want for Gaming
-				</label>
-			  </div>
-			  <div class="form-check">
-				<input class="form-check-input"  name="othertype" type="checkbox" value="Want for Gaming" id="Excellent Camera">
-				<label class="form-check-label" for="Excellent Camera">
-				  Excellent Camera
-				</label>
-			  </div>
-			
-		</div>
-		
-			<div class="mb-5 form-check form-switch">
-				<input class="form-check-input" type="checkbox" id="showNoCostEmi">
-				<label class="form-check-label" for="showNoCostEmi">Show only no cost EMI Options</label>
-			  </div>
-		 
+	</div>
 	
-		<button type="button" class="btn btn-primary" onclick="getResults()">Submit</button>
-	  </form>
-	  <div class="container shadow-sm rounded p-4">
-		<div class="d-flex justify-content-center" id="resultsLoading" style="visibility: hidden;">
-			<div class="spinner-border" style="width: 4rem; height: 4rem;" role="status">
-			  <span class="visually-hidden">Loading...</span>
-			</div>
-			</div>
-<div id="phoneDataResults"></div>
+
+	  <div class="d-flex flex-lg-grow-1 shadow-sm rounded p-4">
+		<div class="" id="resultsLoading" style="display:none !important;">
+			<div class="d-flex justify-content-center">	<div class="spinner-border" style="width: 4rem; height: 4rem;" role="status">
+				<span class="visually-hidden">Loading...</span>
+			  </div></div>
+		
+			</div> 
+		
+<div id="phoneDataResults" class="d-flex flex-column flex-md-row"></div>
 			
 	  </div>
 </div>

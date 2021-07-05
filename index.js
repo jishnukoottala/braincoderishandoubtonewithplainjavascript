@@ -40,35 +40,16 @@ for (var i = 0; i < checkboxes.length; i++) {
 
 const noCostEmi = document.getElementById("showNoCostEmi").checked;
 
-const cardTemplate =`<div class="card mb-4">
-				
-<div class="card-body d-flex">
-    <div><img style="width: 18rem;" src="https://images.unsplash.com/photo-1624916888351-a18f955a1b93?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" class="card-img-top" alt="phoneimage"></div>
-    <div class="d-flex flex-column flex-fill mx-4">
-        <div><p class="h3">h3. Bootstrap heading</p>
-            <p class="h4">h3. Bootstrap heading</p>
-            <ul class="list-unstyled">
-                <li>List item 1</li>
-                <li>List item 1</li>
-                <li>List item 1</li>
-                <li>List item 1</li>
-                <li>List item 1</li>
-
-            </ul>
-        </div>
-    </div>
-</div>
-</div>`
 
 
 
 console.log({email, ram, minrange, maxrange, phoneos, othertypes, noCostEmi})
 loading = true;
-document.getElementById("resultsLoading").style.visibility='visible';
+document.getElementById("resultsLoading").style.display='block';
 fetch('https://6i0qk.sse.codesandbox.io/api/phonedata').then(response => response.json())
   .then(result => {
       loading = false;
-        document.getElementById("resultsLoading").style.visibility='hidden';
+        document.getElementById("resultsLoading").style.display='none';
         renderResults(result)
 
       console.log(result)
@@ -88,7 +69,7 @@ function renderResults(result){
 
     const content = document.getElementById("phoneDataResults");
     content.innerHTML="";
-    content.insertAdjacentHTML("beforeend", joinedHtml);
+   content.insertAdjacentHTML("beforeend", joinedHtml);
 
 }
 
@@ -104,7 +85,7 @@ const createMarkup = function createMarkup(data) {
               <div><p class="h3">${data.brand} ${data.name}</p>
                   <p class="h4">₹ ${data.price}</p>
                   <ul class="list-unstyled">
-                      <li>Rear Camera : ${data.rearCamera} | Front Camera ${data.frontCamera}</li>
+                      <li>Rear Camera : [${data.rearCamera}] MP | Front Camera ${data.frontCamera} MP</li>
                       <li>${data.ram} | ${data.rom}</li>
                       <li>${data.display}</li>
                       <li>${data.battery} mAh Battery</li>
