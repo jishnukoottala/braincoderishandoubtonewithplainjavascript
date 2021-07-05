@@ -65,10 +65,7 @@ const cardTemplate =`<div class="card mb-4">
 console.log({email, ram, minrange, maxrange, phoneos, othertypes, noCostEmi})
 loading = true;
 document.getElementById("resultsLoading").style.visibility='visible';
-fetch('https://6i0qk.sse.codesandbox.io/api/phonedata',{ 
-    mode: 'no-cors' // 'cors' by default
-})
-  .then(response => response.json())
+fetch('https://6i0qk.sse.codesandbox.io/api/phonedata').then(response => response.json())
   .then(result => {
       loading = false;
         document.getElementById("resultsLoading").style.visibility='hidden';
